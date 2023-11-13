@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="autoIncrement" value="true" />
+
+    <changeSet id="20231113-Student-ModifyColumn" author="kuldeep Singh">
+        <renameColumn
+
+                       newColumnName="student_no"
+                       oldColumnName="student_id"
+                       tableName="student"/>
+    </changeSet>
+</databaseChangeLog>
